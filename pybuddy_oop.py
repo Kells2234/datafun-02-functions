@@ -1,63 +1,17 @@
 """
-Build a PyBuddy to illustrate Python skills.
+Kelly Simmons
+1/30/2023
+Data Analytics Fundamentals
+Project 2
 
-Overview:
-
-This example introduces a common way to organize code - into
-classes that reflect the real world.
-
-Each class is a combination of attributes (data)
-and methods (functions) that operate on that data.
-
-Look for the nouns in your application. 
-For example, if you want to code a poker game, you'd make classes for:
-
-- Card, Deck, Hand, Player, Game, etc.
-
-You then use the Card class to create 52 instances of cards,
-each with a number/rank and suit, 
-e.g. an instance/object to represent the Jack of Spades.
-
-Object-Oriented Programming in Python
-
-- Python allows you to create classes - or data classes
-- You don't have to organize your code this way
-- Implement classes where you'll instantiate one or more with 
-  specific data. Do want makes sense.
-
-We'll use it here, because we want to instantiate 
-several PyBuddies, each with different attributes, 
-but sharing common behaviors (methods).
-
-A method is a function that is part of a class.
-
-When instantating a PyBuddy, you can create 
-a DOG, a CAT, an ELF, or other type.
-
-Python Organization:
-
-Unlike other languages, 
-Python does not always have just one class per file.
-In this file, we have our enumerated class for the species, 
-as well as the main PyBuddy class.
-
-This example:
-
-- uses an object-oriented approach
-- wraps functionality into a named class
-- the class can be instantiated many times
-- (e.g. a cat named Boots, a dog named Rex)
-- classes define:
-    - properties (class data)
-    - methods (class functions)
-
-All Python classes need a built-in class method called __init__:
-__init__ is used to create an instance of this class
-
-Python includes an implicit pointer to the instance as a whole
-By convention, 
-most analysts name this first implicit parameter 'self'
-You can change it, but violating customs is considered bad form.
+This script will define a PyBuddy class that describes the 2022 season statistics of a single NASCAR Driver
+The drivers statistics include these attributes:
+    race team___________string, selected at random from a list
+    car number__________int
+    races run___________int
+    finishing positions_________int
+    best finishes___________int
+    average finishing postiion_________float (finishing positions / races)
 """
 
 # first, import helpful modules to make our job easier
@@ -72,7 +26,78 @@ class Species(Enum):
     ELF = 3
     ORC = 4
 
+# define class that contains different racing series
+class "level"(Enum):
+    CUP level = 1
+    Xfinity level = 2
+    Craftsman level = 3
 
+# instantiate the list of teams
+teams = (
+    ('23XI Racing'),
+    ('Frontrow Motorsports')
+    ('Hendrick Motorsports')
+    ('JD Motorsports')
+    ("Joe Gibbs Racing")
+    ('JR Motorsports')
+    ('JTG Daugherty Racing')
+    ('Kaulig Racing')
+    ('Kyle Busch Motorsports')
+    ('Live Fast Motorsports')
+    ('MBM Motorsports')
+    ('Niece Motorsports')
+    ('Petty GMS Motorsports')
+    ('RFK Racing')
+    ('Richard Childress Racing')
+    ('Rick Ware Racing')
+    ('Spire Motorsports')
+    ('Stewart Hass Racing')
+    ('Thorsport Racing')
+    ('Trackhouse Racing')
+    ('Wood Brothers Racing')
+)
+
+def populate_list_of_Cars():
+    #initiate an empty list to be populated
+    car_numbers = []
+
+    for i in range(36):
+        populate_list_of_cars.append(random.randint(0,4))
+
+    populate_list_of_cars = (
+      ('23', '45')
+      ('34', '38')
+      ('5', '9', '24', '48') 
+      ('11', '19', '20', '54')
+      ('47')
+      ('16', '31')
+      ('78') 
+      ('66', '55')
+      ('43', '42')
+      ('6', '17')
+      ('8', '3')
+      ('51')
+      ('7', '77')
+      ('4', '10', '14')
+      ('2', '12', '22')
+      ('1', '99')
+      ('21')
+    )
+
+def races_run():
+    return random.randint(1, 36)
+
+
+#add in fileds that represent the driver stats
+self.driver_name = "Joey Lagano"
+
+self.team = teams[random.randint(0, 38)]
+
+#choose a level at random
+self.level = Level.value = random.randint(1, 3)
+
+# populate a list that represents finishing position by the driver, one entry per race
+# list is populate by populate finishing_position 
 class PyBuddy:
     """ PyBuddy class for creating a study buddy."""
 

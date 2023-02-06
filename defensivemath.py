@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
     print("Explore some functions in the math module")
     print()
-    print(f"math.comb(5,1) = {math.comb(5,1)}")
+    print(f"math.comb(5,1) = {math.comb(5,1)}") 
     print(f"math.perm(5,1) = {math.perm(5,1)}")
     print()
     print(f"math.comb(5,3) = {math.comb(5,3)}")
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     print(f"get_circle_area(5) = {get_circle_area(5)}")
     print(f"get_circle_area(-16) = {get_circle_area(-16)}")
     print(f"get_circle_area(math.inf) = {get_circle_area(math.inf)}")
-    print(f"get_circle_area('five') = {get_circle_area('five')}")
+    print(f"get_circle_area('five') = {get_circle_area('five')}") 
     print()   
     print("Call print_circle_areas() function with a list of values")
     print()
